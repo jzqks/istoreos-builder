@@ -119,7 +119,7 @@ PACKAGES="$PACKAGES luci-i18n-firewall-zh-cn"
 PACKAGES="$PACKAGES luci-i18n-ttyd-zh-cn"
 PACKAGES="$PACKAGES luci-i18n-cifs-mount-zh-cn"
 PACKAGES="$PACKAGES luci-i18n-unishare-zh-cn"
-PACKAGES="$PACKAGES luci-i18n-dockerman-zh-cn"
+# PACKAGES="$PACKAGES luci-i18n-dockerman-zh-cn"
 
 # LuCI 主题与功能
 PACKAGES="$PACKAGES luci-theme-argon"
@@ -157,7 +157,7 @@ echo "$PACKAGES"
 
 
 # 开始构建
-make image PROFILE=generic PACKAGES="$PACKAGES" FILES="files" ROOTFS_PARTSIZE=2048
+make image PROFILE=generic PACKAGES="$PACKAGES" FILES="files" ROOTFS_PARTSIZE=1024
 
 if [ $? -ne 0 ]; then
     echo "$(date '+%Y-%m-%d %H:%M:%S') - Error: Build failed!"
