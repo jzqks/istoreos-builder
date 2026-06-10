@@ -71,7 +71,7 @@ jobs:
     - name: 🚀 上传到 Release
       uses: softprops/action-gh-release@v2.2.1
       with:
-        tag_name: iStoreOS-24.10.6-x86-efi
+        tag_name: iStoreOS-24.10.7-x86-efi
         files: |
           imagebuilder/bin/targets/x86/64/*squashfs-combined-efi.img.gz
         token: ${{ secrets.GITHUB_TOKEN }}
